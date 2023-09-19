@@ -4,7 +4,7 @@ import time
 now = time.asctime()
 print(f'It is {now}')
 
-now_test = time.strftime(%b
+
 while True:
     user_input = input('Type show, add, edit, delete or exit: ')
     user_input = user_input.strip()
