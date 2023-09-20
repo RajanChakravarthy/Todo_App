@@ -2,3 +2,4 @@ clean the bag
 meet roy
 buy milk
 buy bread
+add function implemented
