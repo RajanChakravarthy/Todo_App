@@ -12,7 +12,7 @@ while True:
     event, value = window.read()
     match event:
         case 'Add':
-            todo = value['todo']
+            todo = value['todo'] + '\n'
             todos = functions.get_todo()
             todos.append(todo)
             functions.write_todos(todos)
