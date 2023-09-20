@@ -1,5 +1,6 @@
 clean the bag
 meet roy
-buy milk
+buy choco milk
 buy bread
-add function implemented
+add implemented
+edit function implemented
