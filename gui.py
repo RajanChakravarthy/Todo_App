@@ -1,5 +1,9 @@
 import functions
 import PySimpleGUI as sg
+import time
+
+sg.theme('BlueMono')
+clock = sg.Text(time.asctime(), key='clock_key')
 
 label_value = sg.Text('Type in a To-Do')
 input_button = sg.InputText(tooltip='Enter todo.', key='todo_key')
@@ -11,16 +15,16 @@ delete_button = sg.Button('Delete')
 exit_button = sg.Button('Exit')
 
 window = sg.Window('To-Do App',
-                   layout=[[label_value],
-                        [input_button, add_button],
-                        [list_button, edit_button, delete_button],
-                         [exit_button]],
+                   layout=[[clock],
+                          [label_value],
+                          [input_button, add_button],
+                          [list_button, edit_button, delete_button],
+                          [exit_button]],
                    font= ('Arial Bold',12))
 
 while True:
-    event, value = window.read()
-    print(event)
-    print(value)
+    event, value = window.read(timeout=200)
+    window['clock_key'].update(time.asctime())
     match event:
         case 'Add':
             if value['todo_key'] =='':   # avoids empty task to be added.

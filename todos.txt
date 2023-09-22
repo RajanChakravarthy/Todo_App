@@ -5,5 +5,3 @@ buy bread
 add implemented
 edit function implemented
 gartenparty
-tzrtzr
-dfsdf
