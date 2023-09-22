@@ -1,6 +1,9 @@
 clean the bag
-meet roy
-buy choco milk
+pick up shramit
+buy milk
 buy bread
 add implemented
 edit function implemented
+gartenparty
+tzrtzr
+dfsdf
