@@ -1,6 +1,11 @@
 import functions
 import PySimpleGUI as sg
 import time
+import os
+
+if not os.path.exists('todos.txt'):
+    with open('todos.txt', mode = 'w'):
+        pass
 
 sg.theme('BlueMono')
 clock = sg.Text(time.asctime(), key='clock_key')
@@ -32,7 +37,7 @@ while True:
             else:
                 todo = value['todo_key'] + '\n'
                 todos = functions.get_todo()
-                todos.append(todo)
+                todos.append(todo.title())
                 functions.write_todos(todos)
                 window['todos_key'].update(todos)
                 window['todo_key'].update('')
@@ -45,7 +50,7 @@ while True:
                     todo_to_edit = value['todos_key'][0]
                     new_todo = value['todo_key']
                     index_number = todos.index(todo_to_edit)
-                    todos[index_number] = new_todo + '\n'
+                    todos[index_number] = new_todo.title() + '\n'
                     functions.write_todos(todos)
                     window['todos_key'].update(todos)
                     window['todo_key'].update('')

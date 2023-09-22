@@ -1,7 +1,3 @@
-clean the bag
-pick up shramit
-buy milk
-buy bread
-add implemented
-edit function implemented
-gartenparty
+Meet A Frnd
+Buy Milk
+Buy Bread
